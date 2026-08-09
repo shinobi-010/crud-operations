@@ -12,5 +12,8 @@
   },
   "dependencies": {
     "express": "^5.2.1"
+  },
+  "scripts": {
+    "start": "bun --watch index.js"
   }
 }
