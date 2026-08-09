@@ -1,0 +1,12 @@
+services:
+  mongo:
+    image: mongo:8.0
+    container_name: mongo_8
+    environment:
+      - MONGO_INITDB_DATABASE=${DB}
+      - MONGO_INITDB_ROOT_USERNAME=${USER}
+      - MONGO_INITDB_ROOT_PASSWORD=${PASS}
+    ports:
+      - "27017:27017" # use quotes avoid parsing issues
+    volumes:
+      - ./data/mongo:/data/db
