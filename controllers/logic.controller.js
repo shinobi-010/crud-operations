@@ -45,10 +45,47 @@ export async function pgUpdateUser(req, res, next) {
       [name, role, id]
     );
 
-  if (!checkUser(result, res)) return;
+    if (!checkUser(result, res)) return;
 
     return sendSuccess(res, result.rows[0]);
   } catch (err) {
+    return next(err);
+  }
+}
+
+export async function pgDeleteUser(req, res, next) {
+  const { id } = req.params;
+  try {
+    const result = await pool.query(
+      `DELETE FROM users
+      WHERE id = $1
+      RETURNING *`,
+      [id]
+    );
+    if (result.rows.length == 0) {
+      return sendError(res, "user not found", 404);
+    }
+    return sendSuccess(res, result.rows[0]);
+  }
+  catch (err) {
+    return next(err);
+  }
+}
+
+export async function pgGetUserById(req, res, next) {
+  const { id } = req.params;
+
+  try {
+    const result = await pool.query(`SELECT * FROM users
+    WHERE id = $1`,
+      [id]
+    );
+    if (result.rows.length === 0) {
+      return sendSuccess(res, "user not found", 404);
+    }
+    return sendSuccess(res, result.rows[0]);
+  }
+  catch (err) {
     return next(err);
   }
 }

@@ -13,8 +13,8 @@
 | **GET** | `/api/users` | Fetch all users from PostgreSQL | ✅ Complete |
 | **POST** | `/api/users` | Create a new user in PostgreSQL | ✅ Complete |
 | **PUT / PATCH** | `/api/users/:id` | Update an existing user by ID | ✅ Complete |
-| **GET** | `/api/users/:id` | Fetch single user by ID from PostgreSQL | 🎯 To Do (Next) |
-| **DELETE** | `/api/users/:id` | Remove a user by ID | 🎯 To Do (Next) |
+| **GET** | `/api/users/:id` | Fetch single user by ID from PostgreSQL | ✅ Complete |
+| **DELETE** | `/api/users/:id` | Remove a user by ID | ✅ Complete |
 
 ---
 

@@ -23,14 +23,13 @@ Welcome to your Backend Engineering Progress Tracker! As your Senior Backend Gui
 [Phase 2: Architectural Refactoring & Bug Fixes]   ✅ Complete
           │
           ▼
-[Phase 3: Full PostgreSQL CRUD Implementation]     🔄 In-Progress (GET, POST, PUT Done)
+[Phase 3: Full PostgreSQL CRUD Implementation]     ✅ Complete (GET, GET by ID, POST, PUT, DELETE)
           │
           ▼
-[Phase 4: Input Validation & Global Error Handling] ✅ Complete
+[Phase 4: Input Validation & Global Error Handling] ✅ Complete (validateUser, validateId & Centralized Error Handler)
           │
           ▼
-[Phase 5: API Testing, Logging & Documentation]     👈 UP NEXT AFTER BREAK
-```
+[Phase 5: API Testing, Logging & Documentation]     🔄 Active
 
 ---
 
@@ -39,3 +38,5 @@ Welcome to your Backend Engineering Progress Tracker! As your Senior Backend Gui
 - [`02-crud-milestones.md`](file:///e:/backend/crud-op/progress/02-crud-milestones.md) - Milestone tracker for CRUD endpoint implementation.
 - [`03-post-user-created.md`](file:///e:/backend/crud-op/progress/03-post-user-created.md) - Event log for `POST /api/users` endpoint implementation (`201 Created`).
 - [`04-put-validation-error-middleware.md`](file:///e:/backend/crud-op/progress/04-put-validation-error-middleware.md) - Event log for `PUT /api/users/:id`, validation middleware, response formatters, and global error handling.
+- [`05-delete-user-endpoint.md`](file:///e:/backend/crud-op/progress/05-delete-user-endpoint.md) - Event log for `DELETE /api/users/:id` endpoint implementation using PostgreSQL, Postman, and Beekeeper Studio.
+- [`06-get-user-by-id-and-validate-id-middleware.md`](file:///e:/backend/crud-op/progress/06-get-user-by-id-and-validate-id-middleware.md) - Event log for `GET /api/users/:id` endpoint implementation and `validateId` middleware integration across `:id` routes.
